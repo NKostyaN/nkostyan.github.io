@@ -16,24 +16,31 @@
 			}
 
 			#container {
-				width: 100%;
-				height: 100%;
+				width: 70%;
+				height: 70%;
+				margin: 0 auto;
 			}
 		</style>
 	</head>
 
 	<body>
+		<h1 align="center">Octan can render panoramas</h1>
+		
 		<div id="container"></div>
 
 		<script>
 			var div = document.getElementById('container');
 			var PSV = new PhotoSphereViewer({
-					panorama: 'https://raw.githubusercontent.com/NKostyaN/nkostyan.github.io/master/img/EnvMap.jpg',
+					panorama: 'https://raw.githubusercontent.com/NKostyaN/nkostyan.github.io/master/img/PanoramicRoom4K.png',
 					container: div,
-					time_anim: 3000,
+					time_anim: 'false',
+					zoom_level: 50,
+					default_position: {
+						long: '-90deg'
+					},
 					navbar: true,
 					navbar_style: {
-						backgroundColor: 'rgba(58, 67, 77, 0.7)'
+						backgroundColor: 'rgba(50, 50, 50, 0.5)'
 					},
 				});
 		</script>
